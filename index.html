@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Girassol</title>
+    <title>Girasol</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!-- Topo da página -->
     <header>
         <div class="logo">
-            <h1>Girassol</h1>
+            <h1>Girasol</h1>
         </div>
         <nav>
             <ul>
@@ -23,12 +23,19 @@
         </nav>
     </header>
 
-    <!-- Banner principal -->
-    <section class="banner">
-        <div class="banner-text">
-            <h2>Semijoias Folheadas por Apenas R$20</h2>
-            <p>Qualquer peça do nosso catálogo por R$20,00.</p>
-            <a href="#catalogo" class="btn">Veja o Catálogo</a>
+    <!-- Carrossel de Imagens -->
+    <section class="carousel">
+        <div class="carousel-images">
+            <img src="bijuterias/cuidados.jpeg" alt="Imagem 1">
+            <img src="bijuterias/novidade.jpeg" alt="Imagem 2">
+            <img src="bijuterias/piercing fake.jpeg" alt="Imagem 3">
+        </div>
+        <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+        <button class="next" onclick="moveSlide(1)">&#10095;</button>
+        <div class="dots">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
         </div>
     </section>
 
@@ -49,16 +56,6 @@
             <div class="produto">
                 <img src="img/chocker-alhambra.jpg" alt="Chocker Alhambra - Dourado">
                 <h3>Chocker Alhambra - Dourado</h3>
-                <p>R$ 20,00</p>
-            </div>
-            <div class="produto">
-                <img src="img/trio-brinco-verde.jpg" alt="Trio de Brinco Verde - Dourado">
-                <h3>Trio de Brinco Verde - Dourado</h3>
-                <p>R$ 20,00</p>
-            </div>
-            <div class="produto">
-                <img src="img/piercing-fake.jpg" alt="Piercing Fake - Prata">
-                <h3>Piercing Fake - Prata</h3>
                 <p>R$ 20,00</p>
             </div>
         </div>
@@ -82,5 +79,8 @@
             </div>
         </div>
     </footer>
+
+    <!-- Link para o JavaScript -->
+    <script src="script.js"></script>
 </body>
 </html>
