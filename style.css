@@ -55,6 +55,7 @@ nav ul li a:hover {
     align-items: center;
     text-align: center;
     color: rgb(124, 82, 63); /* cor trocada */
+    background-color: rgb(242, 227, 211); /* banner mais claro */
 }
 
 .banner h2 {
@@ -99,7 +100,7 @@ nav ul li a:hover {
 
 .produto {
     width: 30%;
-    background-color: rgb(177, 142, 121); /* cor trocada */
+    background-color: rgb(242, 227, 211); /* cor trocada para mais clara */
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
