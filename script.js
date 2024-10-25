@@ -1,26 +1,25 @@
-let currentSlide = 0;
+let slideIndex = 0;
+showSlides();
 
-function showSlide(index) {
-    const slides = document.querySelectorAll('.carousel-item');
-    if (index >= slides.length) {
-        currentSlide = 0;
-    } else if (index < 0) {
-        currentSlide = slides.length - 1;
-    } else {
-        currentSlide = index;
+function showSlides() {
+    let slides = document.getElementsByClassName("carousel-item");
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
     }
-
-    const offset = -currentSlide * 100;
-    document.querySelector('.carousel').style.transform = `translateX(${offset}%)`;
-}
-
-function nextSlide() {
-    showSlide(currentSlide + 1);
+    slideIndex++;
+    if (slideIndex > slides.length) { slideIndex = 1 }
+    slides[slideIndex - 1].style.display = "block";
+    setTimeout(showSlides, 3000); // Muda a cada 3 segundos
 }
 
 function prevSlide() {
-    showSlide(currentSlide - 1);
+    let slides = document.getElementsByClassName("carousel-item");
+    slideIndex = (slideIndex <= 1) ? slides.length : slideIndex - 1;
+    showSlides();
 }
 
-// Iniciar o carrossel na primeira imagem
-showSlide(currentSlide);
+function nextSlide() {
+    let slides = document.getElementsByClassName("carousel-item");
+    slideIndex = (slideIndex >= slides.length) ? 1 : slideIndex + 1;
+    showSlides();
+}
